@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Cobby_Extended>
+            <version>0.1.0</version>
+        </Cobby_Extended>
+    </modules>
+    <global>
+        <models>
+            <cobby_extended>
+                <class>Cobby_Extended_Model</class>
+                <resourceModel>cobby_extended_resource</resourceModel>
+            </cobby_extended>
+            <cobby_extended_resource>
+                <class>Cobby_Extended_Model_Resource</class>
+            </cobby_extended_resource>
+        </models>
+        <blocks>
+            <cobby_extended>
+                <class>Cobby_Extended_Block</class>
+            </cobby_extended>
+        </blocks>
+        <helpers>
+            <cobby_extended>
+                <class>Cobby_Extended_Helper</class>
+            </cobby_extended>
+        </helpers>
+        <events>
+
+            <cobby_catalog_product_attribute_export_after>
+                <observers>
+                    <custom_cobby>
+                        <type>model</type>
+                        <class>cobby_extended/observer</class>
+                        <method>cobbyCatalogProductAttributeExportAfter</method>
+                    </custom_cobby>
+                </observers>
+            </cobby_catalog_product_attribute_export_after>
+
+            <cobby_catalog_product_attribute_option_export_after>
+                <observers>
+                    <custom_cobby>
+                        <type>model</type>
+                        <class>cobby_extended/observer</class>
+                        <method>cobbyCatalogProductAttributeOptionsExportAfter</method>
+                    </custom_cobby>
+                </observers>
+            </cobby_catalog_product_attribute_option_export_after>
+
+            <cobby_catalog_product_export_after>
+                <observers>
+                    <custom_cobby>
+                        <type>model</type>
+                        <class>cobby_extended/observer</class>
+                        <method>cobbyCatalogProductExportAfter</method>
+                    </custom_cobby>
+                </observers>
+            </cobby_catalog_product_export_after>
+
+            <cobby_import_product_import_after>
+                <observers>
+                    <custom_cobby>
+                        <type>model</type>
+                        <class>cobby_extended/observer</class>
+                        <method>cobbyCatalogProductImportAfter</method>
+                    </custom_cobby>
+                </observers>
+            </cobby_import_product_import_after>
+
+        </events>
+    </global>
+</config>

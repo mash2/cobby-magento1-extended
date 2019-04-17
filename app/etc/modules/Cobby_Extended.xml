@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Cobby_Extended>
+            <active>true</active>
+            <codePool>local</codePool>
+            <depends>
+                <Mash2_Cobby/>
+            </depends>
+        </Cobby_Extended>
+    </modules>
+</config>
